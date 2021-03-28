@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-use lib ".";
+use lib "../lib";
 use Aztec;
 
 Aztec::PrintHeader();
