@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+
+use lib ".";
+use Aztec;
+
+Aztec::PrintHeader();
+Aztec::PrintAztecSquareGrid(7);
+Aztec::PrintFooter();

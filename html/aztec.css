@@ -1,0 +1,40 @@
+.blank {
+	border: 0;
+	background-color: #FFFFFF;
+}
+.black {
+	background-color: black;
+}
+.red {
+	background-color: red;
+}
+
+.grid-container {
+	display: inline-grid;
+	grid-gap: 1px;
+	grid-column-gap: 1px;
+}
+.larr {
+	background-color: green;
+	text-align: left;
+	vertical-align: middle;
+	grid-row-end: span 2;
+}
+.rarr {
+	background-color: blue;
+	text-align: right;
+	vertical-align: middle;
+	grid-row-end: span 2;
+}
+.uarr {
+	background-color: yellow;
+	text-align: center;
+	vertical-align: top;
+	grid-column-end: span 2;
+}
+.darr {
+	background-color: purple;
+	text-align: center;
+	vertical-align: bottom;
+	grid-column-end: span 2;
+}
