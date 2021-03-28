@@ -27,3 +27,41 @@ The dominoes then move outwards, leaving 2 blocks of 4 squares (A and B).
 [_][2][2][_]
 ~~~
 We can fill these 2 squares with random pairs of dominoes from A(1). 
+
+# JSON expansion
+Each tile will be defined in JSON as a pair of coordinates corresponding to the underlying matrix.   
+The "direction" of each domino will be determined by the direction of the coordinates, as per (ARROW.md).   
+So, for the first element of the set A(1), we will have JSON as follows :-   
+~~~
+[ [0,2],[3,1] ]
+~~~
+where the coordinates of the square are determined by the order of the rows :-
+~~~
+[0][1]
+[2][3]
+~~~
+Thus, when we expand to A(2) we need to transform these 
+~~~
+[ ][_][_][ ] 0-3
+[_][C][D][_] 4-7
+[_][C][D][_] 8-11
+[ ][_][_][ ] 12-15
+~~~
+The domino "[0,2]" becomes "[5,9]".   
+This transform depends on the factor and remainder of the coordinate depending on the old size of the square. 
+
+Then we can determine the "direction" and then amend the coordinates.    
+The domino C "[5,9]" is vertical and points left. The domino D "[6,10]" is vertical and points right.   
+Thus, when we expand we need to transform these 
+~~~
+[ ][_][_][ ]
+[C][_][_][D]
+[C][_][_][D]
+[ ][_][_][ ]
+~~~
+In this case, domino C "[5,9]" becomes "[4,8]", and domino D "[6,10]" becomes "[7,11]".   
+This is a change by 1, since they are both verical dominoes. 
+
+Horizontal dominoes would move by the length of the sides of the square.   
+So when performing the second transform in A(3) - a six-sided square - we would either add or subtract by 6 to move horizontal dominoes. 
+
