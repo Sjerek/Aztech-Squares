@@ -8,9 +8,6 @@ use CGI;
 my $Query = CGI->new();
 my $Params = $Query->Vars();
 
-# naff force
-$Params->{'az'} ||=7;
-
 Aztec::PrintHeader();
 Aztec::PrintAztecSquareGrid( { az => $Params->{'az'} } );
 Aztec::PrintAztecSquareDimers( { dimers => $Params->{'json'} } );

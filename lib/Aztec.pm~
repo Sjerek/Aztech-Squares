@@ -79,7 +79,5 @@ sub GetAztecSquare {
 	}
 	return \@Square;
 }
-
-sub PrintAztecSquareDimers {
-}	
+	
 1;

@@ -1,15 +1,3 @@
-div.main {
-	display: grid;
-	background-color: white;
-}
-
-div.header {
-	display: grid;
-	background-color: blue;
-	color: white;
-	text-transform: capitalize;
-}
-
 .blank {
 	background-color: #FFFFFF;
 	grid-column-end: span 1;
