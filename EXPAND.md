@@ -66,3 +66,8 @@ Horizontal dominoes would move by the length of the sides of the square.
 So when performing the second transform in A(3) - a six-sided square - we would either add or subtract by 6 to move horizontal dominoes. 
 
 We then work out which of the valid squares do not contain dominoes, and fill them with one of the patterns from the A(1) set. 
+## Finding empty blocks
+We can create a hash with keys equals to all the coordinates of the dominoes.   
+Then we can traverse the valid points (N) on the Aztec Square where the length of the side is L.   
+If point N is not found in the hash keys, then we know that N, N+1, N+L and N+L+1 are an empty block of four squares. 
+We can continue checking valid points in the Aztec Square (bypassing the previously found empty coordinates), to find the remaining empty coordinates. 
