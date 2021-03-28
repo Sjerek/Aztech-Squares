@@ -60,8 +60,9 @@ Thus, when we expand we need to transform these
 [ ][_][_][ ]
 ~~~
 In this case, domino C "[5,9]" becomes "[4,8]", and domino D "[6,10]" becomes "[7,11]".   
-This is a change by 1, since they are both verical dominoes. 
+This is a change by 1, since they are both vertical dominoes. 
 
 Horizontal dominoes would move by the length of the sides of the square.   
 So when performing the second transform in A(3) - a six-sided square - we would either add or subtract by 6 to move horizontal dominoes. 
 
+We then work out which of the valid squares do not contain dominoes, and fill them with one of the patterns from the A(1) set. 
